@@ -1,0 +1,25 @@
+<section class="vh-100" style="background-color: #d030a0">
+	<div class="container py-5 h-100">
+		<div class="row d-flex justify-content-center align-items-center h-100">
+			<div class="col col-xl-10">
+				<div class="card" style="border-radius: 15px">
+					<div class="card-body p-5">
+						<h1 class="mb-4">To-Do App! ✨</h1>
+						<app-todoform (newTaskChildEvent)="updateTasksList($event)" [tasksList]="tasksList"></app-todoform>
+						<app-todolist [tasksList]="tasksList" [tasksLength]="tasksList.length"></app-todolist>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- [Dummy UI To SEt The Logic Before Styling]-->
+
+<!-- <app-todoform (newTaskChildEvent)="updateTasksList($event)"></app-todoform>
+<app-todolist [tasksList] = "tasksList"></app-todolist>
+<!-- <ul >
+  <li *ngFor="let item of tasksList">{{item}}</li>
+</ul> -->
+
+<!-- [Dummy UI To SEt The Logic Before Styling]-->

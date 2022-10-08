@@ -1,0 +1,14 @@
+<h6 class="text-center text-warning">{{
+	tasksLength > 0 ? 'You have ' + tasksLength + ' Tasks to be done ⚡' : "You don't have tasks today ❤️"
+}}</h6>
+<ul class="list-group mb-0" *ngFor="let task of tasksList">
+	<app-taskitem [task]="task" (delete)="deleteTaskFromParent($event)" (completeFlag)="updateCurrentItems($event)"></app-taskitem>
+</ul>
+
+<!-- [Dummy UI To SEt The Logic Before Styling]-->
+
+<!-- <div *ngFor="let task of tasksList; let i = index">
+	<app-taskitem [task]="task" (delete)="deleteTaskFromParent($event)"></app-taskitem>
+</div> -->
+
+<!-- [Dummy UI To SEt The Logic Before Styling]-->
