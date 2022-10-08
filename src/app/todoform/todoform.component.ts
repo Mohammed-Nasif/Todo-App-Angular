@@ -19,14 +19,14 @@ export class TodoformComponent implements OnInit {
 			}
 		}
 	}
-	showToastr(taskValue:string) {
+	showToastr(taskValue: string) {
 		this.toastr.success(`${taskValue} Added`, 'Beat It 💪 !', {
 			timeOut: 1500,
 			positionClass: 'toast-top-right',
 			progressBar: true,
 		});
 	}
-	showWarnToastr(taskValue:string) {
+	showWarnToastr(taskValue: string) {
 		this.toastr.warning(`${taskValue} Is Already Added`, 'Go For Another One 🧠 !', {
 			timeOut: 1500,
 			positionClass: 'toast-top-right',
