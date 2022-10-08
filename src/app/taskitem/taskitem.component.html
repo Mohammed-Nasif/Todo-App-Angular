@@ -1,0 +1,26 @@
+<li class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+	<div class="d-flex align-items-center">
+		<input class="form-check-input me-2" type="checkbox" value="" aria-label="..." (click)="completeToggle()" />
+		<p *ngIf="isCompleted; then completed; else notcompleted"></p>
+		<ng-template #notcompleted>{{ task }}</ng-template>
+		<ng-template #completed><del>{{ task }}</del><span class="ms-3 bg-success bg-opacity-25 rounded-2 px-1" style="color: rgb(229, 0, 111);">Great Job ⭐️</span></ng-template>
+	</div>
+	<a href="#!" data-mdb-toggle="tooltip" title="Remove item" (click)="deleteTask()">
+		<fa-icon [icon]="deleteIcon" class="text-primary" (click) ="showToastr()" ></fa-icon>
+	</a>
+</li>
+
+
+<!-- [Dummy UI To SEt The Logic Before Styling]-->
+
+<!-- <div>
+	<p *ngIf="isCompleted; then completed; else notcompleted"></p>
+	<ng-template #notcompleted>{{ task }}</ng-template>
+	<ng-template #completed
+		><del>{{ task }}</del></ng-template
+	>
+	<button class="btn" (click)="completeToggle()">{{isCompleted? "Undo" : "Complete"}}</button>
+	<button class="btn" (click)="deleteTask()">Delete</button>
+</div> -->
+
+<!-- [Dummy UI To SEt The Logic Before Styling]-->
