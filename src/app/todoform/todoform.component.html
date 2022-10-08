@@ -2,7 +2,7 @@
 	<div class="form-outline flex-fill">
 		<input type="text" id="form3" class="form-control form-control-lg" placeholder="What do you need to do today? 🤔" #inputValue  />
 	</div>
-	<button class="btn btn-primary btn-lg ms-2" (click)="sendTask(inputValue.value)" (keydown.enter)="sendTask(inputValue.value)" (click)="showToastr()">Add</button>
+	<button class="btn btn-primary btn-lg ms-2" (click)="sendTask(inputValue.value)" (keydown.enter)="sendTask(inputValue.value)" (click)="showToastr()" (click)="inputValue.value = ''">Add</button>
 </div>
 
 
